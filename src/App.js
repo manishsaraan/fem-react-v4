@@ -8,25 +8,15 @@ class App extends React.Component {
   }
 
   render() {
-    return React.createElement("div", {}, [
-      React.createElement(
-        "h1",
-        { onClick: this.handleTitleClick },
-        "Adopt me!"
-      ),
-      React.createElement(Pet, {
-        name: "Pepper",
-        animal: "bird",
-        breed: "cocktail"
-      }),
-      React.createElement(Pet, {
-        name: "luna",
-        animal: "Dog",
-        breed: "Havanese"
-      }),
-      React.createElement(Pet, { name: "Doink", animal: "Cat", breed: "mix" })
-    ]);
+    return (
+      <div>
+        <h1 onClick={this.handleTitleClick}>Adopt me!</h1>
+        <Pet name="Pepper" animal="bird" breed="cocktail" />
+        <Pet name="luna" animal="Dog" breed="Havanese" />
+        <Pet name="Doink" animal="Cat" breed="mix" />
+      </div>
+    );
   }
 }
 
-render(React.createElement(App), document.querySelector("#root"));
+render(<App />, document.querySelector("#root"));
