@@ -3,14 +3,10 @@ import { render } from "react-dom";
 import Pet from "./Pet";
 
 class App extends React.Component {
-  handleTitleClick() {
-    alert("you have clicked!");
-  }
-
   render() {
     return (
       <div>
-        <h1 onClick={this.handleTitleClick}>Adopt me!</h1>
+        <h1>Adopt me!</h1>
         <Pet name="Pepper" animal="bird" breed="cocktail" />
         <Pet name="luna" animal="Dog" breed="Havanese" />
         <Pet name="Doink" animal="Cat" breed="mix" />
